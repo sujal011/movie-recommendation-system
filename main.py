@@ -1,3 +1,5 @@
+# pip install pandas scikit-learn
+
 import pandas as pd
 
 movies = pd.read_csv('ml-latest-small/movies.csv')
@@ -9,14 +11,14 @@ data = pd.merge(ratings, movies, on='movieId')
 
 #  Collaborative Filtering (Using the Surprise Library)
 
-from surprise import Dataset, Reader
-from surprise import SVD
-from surprise.model_selection import train_test_split
-from surprise import accuracy
+# from surprise import Dataset, Reader
+# from surprise import SVD
+# from surprise.model_selection import train_test_split
+# from surprise import accuracy
 
-# Prepare the data for Surprise
-reader = Reader(rating_scale=(0.5, 5.0))
-data = Dataset.load_from_df(ratings[['userId', 'movieId', 'rating']], reader)
+# # Prepare the data for Surprise
+# reader = Reader(rating_scale=(0.5, 5.0))
+# data = Dataset.load_from_df(ratings[['userId', 'movieId', 'rating']], reader)
 
 # Content-Based Filtering
 
